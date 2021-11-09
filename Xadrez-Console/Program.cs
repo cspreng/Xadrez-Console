@@ -9,14 +9,11 @@ namespace Xadrez_Console
         static void Main(string[] args)
         {
             try
-            {           
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            {
+                PartidaDeXadrez partida = new PartidaDeXadrez();
+            
 
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(0, 2));
-            tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(2, 4));
-
-            Tela.imprimirTabuleiro(tab);
+            Tela.imprimirTabuleiro(partida.tab);
             }
             catch(TabuleiroExcepition e)
             {
