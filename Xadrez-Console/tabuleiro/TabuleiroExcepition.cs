@@ -2,9 +2,9 @@
 
 namespace tabuleiro
 {
-    class TabuleiroExcepition: Exception
+    class TabuleiroExcepition : Exception
     {
-        public TabuleiroExcepition(string msg): base(msg)
+        public TabuleiroExcepition(string msg) : base(msg)
         {
 
         }
