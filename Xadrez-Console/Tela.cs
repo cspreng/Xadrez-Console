@@ -14,10 +14,18 @@ namespace Xadrez_Console
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
-            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
-            if (partida.xeque)
+            if (!partida.terminada)
             {
-                Console.WriteLine("VOCÊ ESTA EM XEQUE");
+                Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+                if (partida.xeque)
+                {
+                    Console.WriteLine("VOCÊ ESTA EM XEQUE");
+                }
+            }
+            else
+            {
+                Console.WriteLine("XEQUE MATE!!!!");
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
             }
         }
 
